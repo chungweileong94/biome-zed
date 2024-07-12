@@ -56,19 +56,12 @@ Otherwise, it can be configured through the lsp settings:
 
 ### Formatting
 
-**Formatting does not work through the extension yet.**
-
-Instead, you can configure biome as an external formatter:
+Formatting code via extension:
 
 ```jsonc
 // settings.json
 {
-  "formatter": {
-    "external": {
-      "command": "./node_modules/@biomejs/biome/bin/biome",
-      "arguments": ["format", "--write", "--stdin-file-path", "{buffer_path}"]
-    }
-  }
+  "formatter": "language_server"
 }
 ```
 
@@ -107,4 +100,3 @@ The same can be configured on a per-lanugage bassis with the [`languages`](https
   }
 }
 ```
-
